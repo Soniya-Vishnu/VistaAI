@@ -16,14 +16,14 @@ classes: wide
 <div class="team-grid team-grid--2">
 
   <div class="team-card">
-    <img src="/assets/img/research_group/alex_lee.png">
+    <img src="../assets/img/research_group/alex_lee.png">
     <h3><a href="https://www.linkedin.com/in/weiyang-alex-lee/" style="color:inherit; text-decoration:none;" target="_blank" rel="noopener">Alex Lee</a></h3>
     <div class="team-role">Masters at UB → JP Morgan Chase</div>
     <a href="https://www.linkedin.com/in/weiyang-alex-lee/" class="team-link" target="_blank" rel="noopener">Learn more →</a>
   </div>
 
   <div class="team-card">
-    <img src="/assets/img/research_group/christopher_varghese.jfif">
+    <img src="../assets/img/research_group/christopher_varghese.jfif">
     <h3><a href="https://devpost.com/chrisv2003/" style="color:inherit; text-decoration:none;" target="_blank" rel="noopener">Christopher Varghese</a></h3>
     <div class="team-role">Undergrad CS at UB → M&T Bank (Software Engineer)</div>
     <a href="https://devpost.com/chrisv2003/" class="team-link" target="_blank" rel="noopener">Learn more →</a>
@@ -38,7 +38,7 @@ classes: wide
 <div class="team-grid team-grid--2">
 
   <div class="team-card">
-    <img src="/assets/img/research_group/Mingzhenhuang.jpg">
+    <img src="../assets/img/research_group/Mingzhenhuang.jpg">
     <h3><a href="https://mingzhenhuang.com/" style="color:inherit; text-decoration:none;" target="_blank" rel="noopener">Mingzhen Huang</a></h3>
     <div class="team-role">Amazon</div>
     <div class="team-role">PI: Siwei Lyu</div>
@@ -46,7 +46,7 @@ classes: wide
   </div>
 
   <div class="team-card">
-    <img src="/assets/img/research_group/Sudhiryerram.jpeg">
+    <img src="../assets/img/research_group/Sudhiryerram.jpeg">
     <h3><a href="https://skrya.github.io/" style="color:inherit; text-decoration:none;" target="_blank" rel="noopener">Sudhir Yarram</a></h3>
     <div class="team-role">Adobe Research</div>
     <div class="team-role">PI: Junsong Yuan</div>
