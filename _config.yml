@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 direction                : # "ltr" (default), "rtl" # set the direction of the page
-title                    : "VistaAI"
+title                    : "Vishnu Lokhande"
 title_separator          : ""
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Vishnu Lokhande"
@@ -239,7 +239,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Pagination with jekyll-paginate
 paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate_path: /page:path/
 
 # Pagination with jekyll-paginate-v2
 # See https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
@@ -250,8 +250,8 @@ pagination:
   debug: false
   collection: 'posts'
   per_page: 10
-  permalink: '/page/:num/'
-  title: ':title - page :num'
+  permalink: '/page/:path/'
+  title: ':title - page :path'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
@@ -332,3 +332,7 @@ defaults:
       share: true
       related: true
 
+collections:
+  pages:
+    output: true
+    permalink: /:path/
