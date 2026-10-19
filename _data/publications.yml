@@ -1,131 +1,131 @@
 # Each entry becomes one clickable slide in the homepage banner carousel.
 
-- image: /assets/img/publications/manifold_aware_graphdiffusion.png
+- image: ../assets/img/publications/manifold_aware_graphdiffusion.png
   title: "MAGNET: Manifold-Aware Graph Diffusion Network for Connectome Generation"
   venue: "NeurIPS 2026"
   url: "https://arxiv.org/pdf/2610.17014"
 
-- image: /assets/img/publications/Oscar.png
+- image: ../assets/img/publications/Oscar.png
   title: "OSCAR: Orchestrated Self-verification and Cross-path Refinement"
   venue: "CoLM 2026"
   url: "https://arxiv.org/abs/2604.01624"
 
-- image: /assets/img/publications/Geometry.png
+- image: ../assets/img/publications/Geometry.png
   title: "GE-FM: Geometry-aware Energy-based Flow Matching for Non Euclidean Manifolds"
   venue: "TMLR 2026"
   url: "https://openreview.net/forum?id=Wb9wwUF7aV"
 
-- image: /assets/img/publications/ManifoldGD.png
+- image: ../assets/img/publications/ManifoldGD.png
   title: "ManifoldGD: Training-Free Hierarchical Manifold Guidance for Diffusion-Based Dataset Distillation"
   venue: "CVPR 2026"
   url: "https://arxiv.org/abs/2602.23295"
 
-- image: /assets/img/publications/Interpretable.png
+- image: ../assets/img/publications/Interpretable.png
   title: "Interpretable Prompts made Edit-Friendly: Token-to-Token Similarity Reduction in dLLMs for Edit-Friendly Hard Prompt Inversion"
   venue: "CVPR 2026"
   url: "https://openaccess.thecvf.com/content/CVPR2026/papers/Devulapally_Interpretable_Prompts_made_Edit-Friendly_Token-to-Token_Similarity_Reduction_in_dLLMs_for_CVPR_2026_paper.pdf"
 
-- image: /assets/img/publications/Exchangeability.png
+- image: ../assets/img/publications/Exchangeability.png
   title: "Is Exchangeability better than I.I.D to handle Data Distribution Shifts while Pooling Data for Data-scarce Medical image segmentation?"
   venue: "MIDL 2026"
   url: "https://arxiv.org/abs/2507.19575"
 
-- image: /assets/img/publications/Pooling.png
+- image: ../assets/img/publications/Pooling.png
   title: "Beyond Pooling: Matching for Robust Generalization under Data Heterogeneity"
   venue: "AISTATS 2026"
   url: "https://arxiv.org/abs/2602.07154"
 
-- image: /assets/img/publications/Geotter.png
+- image: ../assets/img/publications/Geotter.png
   title: "GeoTTER: Leveraging Local Geometry of Optimal Transport for Zero-Shot Classification"
   venue: "AISTATS 2026"
   url: "https://openreview.net/pdf?id=UfTbD815iu"
 
-- image: /assets/img/publications/Forgetless.png
+- image: ../assets/img/publications/Forgetless.png
   title: "Forget Less by Learning Together through Concept Consolidation"
   venue: "WACV 2026"
   url: "https://arxiv.org/abs/2601.01963"
 
-- image: /assets/img/publications/Forgetlessparents.png
+- image: ../assets/img/publications/Forgetlessparents.png
   title: "Forget Less by Learning from Parents Through Hierarchical Relationships"
   venue: "AAAI 2026"
   url: "https://arxiv.org/abs/2601.01892"
 
-- image: /assets/img/publications/latentdiffusion.png
+- image: ../assets/img/publications/latentdiffusion.png
   title: "Latent Diffusion Unlearning: Protecting against Unauthorized Personalization through Trajectory Shifted Perturbations"
   venue: "ACM Multimedia 2025"
   url: "https://arxiv.org/abs/2510.03089"
 
-- image: /assets/img/publications/yourtextencoder.png
+- image: ../assets/img/publications/yourtextencoder.png
   title: "Your Text Encoder Can Be An Object-Level Watermarking Controller"
   venue: "ICCV 2025"
   url: "https://arxiv.org/abs/2503.11945"
 
-- image: /assets/img/publications/Craftcrossmodal.png
+- image: ../assets/img/publications/Craftcrossmodal.png
   title: "Craft: Cross-modal Aligned Features Improve Robustness of Prompt Tuning"
   venue: "WACV 2025"
   url: "https://arxiv.org/abs/2407.15894"
 
-- image: /assets/img/publications/ParallelEdits.png
+- image: ../assets/img/publications/ParallelEdits.png
   title: "ParallelEdits: Efficient Multi-Aspect Text-Driven Image Editing with Attention Grouping"
   venue: "NeurIPS 2024"
   url: "https://arxiv.org/abs/2406.00985"
 
-- image: /assets/img/publications/Pooling.png
+- image: ../assets/img/publications/Pooling.png
   title: "Pooling Image Datasets with Multiple Covariate Shift and Imbalance"
   venue: "ICLR 2024"
   url: "https://openreview.net/pdf?id=2Mo7v69otj"
 
-- image: /assets/img/publications/Efficientdiscrete.png
+- image: ../assets/img/publications/Efficientdiscrete.png
   title: "Efficient Discrete Multi Marginal Optimal Transport Regularization"
   venue: "ICLR 2023"
   url: "https://openreview.net/pdf?id=R98ZfMt-jE"
 
-- image: /assets/img/publications/Equivariance.png
+- image: ../assets/img/publications/Equivariance.png
   title: "Equivariance Allows Handling Multiple Nuisance Variables When Analyzing Pooled Neuroimaging Datasets"
   venue: "CVPR 2022"
   url: "https://arxiv.org/abs/2203.15234"
 
-- image: /assets/img/publications/GroupRobustness.png
+- image: ../assets/img/publications/GroupRobustness.png
   title: "Towards Group Robustness in the presence of Partial Group Labels"
   venue: "ICML 2022"
   url: "https://arxiv.org/abs/2201.03668/"
 
-- image: /assets/img/publications/PoolingCSF.png
+- image: ../assets/img/publications/PoolingCSF.png
   title: "Pooling CSF Measurements Across Multiple Cohorts in the Preclinical Alzheimer's Consortium"
   venue: "AAIC 2022"
   url: "https://alz.confex.com/alz/2022/meetingapp.cgi/Paper/67977"
 
-- image: /assets/img/publications/Graphparameterization.png
+- image: ../assets/img/publications/Graphparameterization.png
   title: "Graph Reparameterizations for Enabling 1000+ Monte Carlo Iterations in Bayesian Deep Neural Networks"
   venue: "UAI 2021"
   url: "https://proceedings.mlr.press/v161/nazarovs21b/nazarovs21b.pdf"
 
-- image: /assets/img/publications/Constrainedharmonization.png
+- image: ../assets/img/publications/Constrainedharmonization.png
   title: "Constrained Harmonization Algorithm for Pooling Multi-site Datasets"
   venue: "AAIC 2021"
   url: "https://alz.confex.com/alz/2021/meetingapp.cgi/Paper/56234"
 
-- image: /assets/img/publications/Learning_invariant.png
+- image: ../assets/img/publications/Learning_invariant.png
   title: "Learning Invariant Representations using Inverse Contrastive Loss"
   venue: "AAAI 2021"
   url: "https://arxiv.org/pdf/2102.08343.pdf"
 
-- image: /assets/img/publications/Fairalm.png
+- image: ../assets/img/publications/Fairalm.png
   title: "FairALM: An Augmented Lagrangian Method for Training Fair Models with Little Regret"
   venue: "ECCV 2020"
   url: "https://arxiv.org/abs/2004.01355"
 
-- image: /assets/img/publications/Generating_accurate.png
+- image: ../assets/img/publications/Generating_accurate.png
   title: "Generating Accurate Pseudo-labels in Semi-Supervised Learning and Avoiding Overconfident Predictions via Hermite Polynomial Activations"
   venue: "CVPR 2020"
   url: "https://arxiv.org/abs/1909.05479.pdf"
 
-- image: /assets/img/publications/Accelerating_columngeneration.png
+- image: ../assets/img/publications/Accelerating_columngeneration.png
   title: "Accelerating Column Generation via Flexible Dual Optimal Inequalities with Application to Entity Resolution"
   venue: "AAAI 2020"
   url: "https://arxiv.org/abs/1909.05460.pdf"
 
-- image: /assets/img/publications/Constrained_deeplearning.png
+- image: ../assets/img/publications/Constrained_deeplearning.png
   title: "Constrained Deep Learning using Conditional Gradient and Applications in Computer Vision"
   venue: "AAAI 2019"
   url: "https://arxiv.org/abs/1803.06453.pdf"
