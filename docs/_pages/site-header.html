@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="site-header__top">
+    <h1 class="site-header__title">CVML GROUP</h1>
+
+    <!-- Hamburger button — visible only on small screens -->
+    <button class="site-header__burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="site-header__nav" id="site-nav">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/presentphdstudents/' | relative_url }}">Present PhD Students</a>
+    <a href="{{ '/alumni/' | relative_url }}">Alumni</a>
+    <a href="{{ '/collaborators/' | relative_url }}">Collaborators</a>
+    <a href="{{ '/prospectivestudents/' | relative_url }}">Prospective Students</a>
+  </nav>
+</header>
+
+<script>
+(function () {
+  var burger = document.querySelector('.site-header__burger');
+  var nav    = document.getElementById('site-nav');
+  if (!burger || !nav) return;
+
+  burger.addEventListener('click', function () {
+    var isOpen = nav.classList.toggle('is-open');
+    burger.classList.toggle('is-open', isOpen);
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  /* Close menu when any nav link is tapped */
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('is-open');
+      burger.classList.remove('is-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>

@@ -1,0 +1,156 @@
+<style>
+  /* No page scrolling on the home page */
+  html, body { overflow: hidden !important; }
+
+  /* ── Strip every MM wrapper spacing & intro animation ── */
+  #main,
+  .page.h-entry,
+  .page__inner-wrap,
+  .page__content.e-content {
+    padding:             0 !important;
+    margin:              0 !important;
+    animation:           none !important;
+    -webkit-animation:   none !important;
+  }
+  /* Empty <header> MM renders even when page has no title */
+  .page__inner-wrap > header { display: none !important; }
+  /* Empty post-meta block below the carousel */
+  .page__meta              { display: none !important; }
+
+  /* Footer: remove oversized top-margin */
+  .page__footer            { margin-top: 0 !important; }
+  .page__footer footer     { margin: 0 !important; padding: 0.4em 1em !important; }
+
+  /* ── Reset the compiled full-bleed trick so JS can position freely ──
+     (these !important rules beat the compiled SCSS; JS then adds
+      position:fixed / height / top which beat normal compiled rules) */
+  .pub-carousel {
+    left:        0 !important;
+    right:       auto !important;
+    margin-left: 0 !important;
+    margin-right:0 !important;
+    width:       100% !important;
+    max-width:   100% !important;
+  }
+</style>
+
+<div class="pub-carousel" id="pub-carousel">
+  <div class="pub-carousel__track">
+    {% for pub in site.data.publications %}
+    <a class="pub-carousel__slide {% if forloop.first %}is-active{% endif %}"
+       href="{{ pub.url }}" target="_blank" rel="noopener"
+       style="background-image: url('{{ pub.image | relative_url }}');">
+      <div class="pub-carousel__caption">
+        <div class="pub-carousel__title">{{ pub.title }}</div>
+        {% if pub.venue %}<div class="pub-carousel__venue">{{ pub.venue }}</div>{% endif %}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+  <button class="pub-carousel__arrow pub-carousel__arrow--prev" aria-label="Previous">&#10094;</button>
+  <button class="pub-carousel__arrow pub-carousel__arrow--next" aria-label="Next">&#10095;</button>
+
+  <div class="pub-carousel__dots">
+    <button class="pub-carousel__dot is-active" data-dot="0" aria-label="Go to section 1"></button>
+    <button class="pub-carousel__dot" data-dot="1" aria-label="Go to section 2"></button>
+    <button class="pub-carousel__dot" data-dot="2" aria-label="Go to section 3"></button>
+    <button class="pub-carousel__dot" data-dot="3" aria-label="Go to section 4"></button>
+    <button class="pub-carousel__dot" data-dot="4" aria-label="Go to section 5"></button>
+  </div>
+</div>
+
+<script>
+/* ── Fit carousel with position:fixed, exactly between header and footer ── */
+function fitCarousel() {
+  var carousel = document.getElementById('pub-carousel');
+  var header   = document.querySelector('.site-header');
+  var footer   = document.querySelector('.page__footer');
+  if (!carousel || !header || !footer) return;
+
+  var headerH   = header.offsetHeight;
+  var footerH   = footer.offsetHeight;
+  var carouselH = Math.max(200, window.innerHeight - headerH - footerH);
+
+  /* position:fixed escapes the MM layout entirely — no more gap or width issues */
+  carousel.style.position    = 'fixed';
+  carousel.style.top         = headerH + 'px';
+  carousel.style.left        = '0';
+  carousel.style.width       = '100%';
+  carousel.style.height      = carouselH + 'px';
+  carousel.style.marginTop   = '0';
+  carousel.style.marginLeft  = '0';
+  carousel.style.marginRight = '0';
+  carousel.style.zIndex      = '100';   /* below fixed header (z:1000) */
+
+  /* Spacer in document flow so footer is pushed to window bottom */
+  var spacer = document.getElementById('carousel-spacer');
+  if (!spacer) {
+    spacer = document.createElement('div');
+    spacer.id = 'carousel-spacer';
+    carousel.parentNode.insertBefore(spacer, carousel.nextSibling);
+  }
+  spacer.style.display   = 'block';
+  spacer.style.marginTop = headerH + 'px';   /* clears the fixed header */
+  spacer.style.height    = carouselH + 'px'; /* pushes footer to window bottom */
+}
+
+/* Run at DOM ready, then at 100 ms & 600 ms (catches MM's 0.45 s animation) */
+document.addEventListener('DOMContentLoaded', function () {
+  fitCarousel();
+  setTimeout(fitCarousel, 100);
+  setTimeout(fitCarousel, 600);
+});
+window.addEventListener('resize', fitCarousel);
+
+/* ── Carousel auto-advance & dot logic ── */
+(function () {
+  var root    = document.getElementById('pub-carousel');
+  if (!root) return;
+
+  var slides  = Array.prototype.slice.call(root.querySelectorAll('.pub-carousel__slide'));
+  var dots    = Array.prototype.slice.call(root.querySelectorAll('.pub-carousel__dot'));
+  var prevBtn = root.querySelector('.pub-carousel__arrow--prev');
+  var nextBtn = root.querySelector('.pub-carousel__arrow--next');
+  var current    = 0;
+  var NUM_DOTS   = dots.length;
+  var intervalMs = 1500;
+  var timer      = null;
+
+  function dotForSlide(idx) {
+    return Math.min(NUM_DOTS - 1, Math.floor(idx * NUM_DOTS / slides.length));
+  }
+  function firstSlideForDot(d) {
+    return Math.floor(d * slides.length / NUM_DOTS);
+  }
+  function show(index) {
+    var pd = dotForSlide(current);
+    slides[current].classList.remove('is-active');
+    current = (index + slides.length) % slides.length;
+    var nd = dotForSlide(current);
+    slides[current].classList.add('is-active');
+    if (pd !== nd) {
+      dots[pd].classList.remove('is-active');
+      dots[nd].classList.add('is-active');
+    }
+  }
+  function next()  { show(current + 1); }
+  function prev()  { show(current - 1); }
+  function start() { timer = setInterval(next, intervalMs); }
+  function stop()  { clearInterval(timer); }
+
+  if (slides.length > 1) {
+    start();
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    nextBtn.addEventListener('click', function (e) { e.preventDefault(); stop(); next(); start(); });
+    prevBtn.addEventListener('click', function (e) { e.preventDefault(); stop(); prev(); start(); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { stop(); show(firstSlideForDot(i)); start(); });
+    });
+  } else {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+  }
+})();
+</script>
