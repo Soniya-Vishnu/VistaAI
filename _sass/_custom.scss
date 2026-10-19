@@ -197,18 +197,18 @@
    at each breakpoint, instead of a single fixed 130px that only works
    on desktop */
 .page-content-offset {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 @media (max-width: 900px) {
   .page-content-offset {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 500px) {
   .page-content-offset {
-    margin-top: 70px;
+    margin-top: 10px;
   }
 }
 
