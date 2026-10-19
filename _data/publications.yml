@@ -20,7 +20,7 @@
   venue: "CVPR 2026"
   url: "https://arxiv.org/abs/2602.23295"
 
-- image: /assets/img/publications/Interpretable.png
+- image: ../assets/img/publications/Interpretable.png
   title: "Interpretable Prompts made Edit-Friendly: Token-to-Token Similarity Reduction in dLLMs for Edit-Friendly Hard Prompt Inversion"
   venue: "CVPR 2026"
   url: "https://openaccess.thecvf.com/content/CVPR2026/papers/Devulapally_Interpretable_Prompts_made_Edit-Friendly_Token-to-Token_Similarity_Reduction_in_dLLMs_for_CVPR_2026_paper.pdf"
@@ -55,7 +55,7 @@
   venue: "ACM Multimedia 2025"
   url: "https://arxiv.org/abs/2510.03089"
 
-- image: /assets/img/publications/yourtextencoder.png
+- image: /assets/img/publications/Yourtextencoder.png
   title: "Your Text Encoder Can Be An Object-Level Watermarking Controller"
   venue: "ICCV 2025"
   url: "https://arxiv.org/abs/2503.11945"
@@ -65,7 +65,7 @@
   venue: "WACV 2025"
   url: "https://arxiv.org/abs/2407.15894"
 
-- image: /assets/img/publications/ParallelEdits.png
+- image: /assets/img/publications/Paralleledits.png
   title: "ParallelEdits: Efficient Multi-Aspect Text-Driven Image Editing with Attention Grouping"
   venue: "NeurIPS 2024"
   url: "https://arxiv.org/abs/2406.00985"
@@ -85,12 +85,12 @@
   venue: "CVPR 2022"
   url: "https://arxiv.org/abs/2203.15234"
 
-- image: /assets/img/publications/GroupRobustness.png
+- image: /assets/img/publications/Grouprobustness.png
   title: "Towards Group Robustness in the presence of Partial Group Labels"
   venue: "ICML 2022"
   url: "https://arxiv.org/abs/2201.03668/"
 
-- image: /assets/img/publications/PoolingCSF.png
+- image: /assets/img/publications/Poolingcsf.png
   title: "Pooling CSF Measurements Across Multiple Cohorts in the Preclinical Alzheimer's Consortium"
   venue: "AAIC 2022"
   url: "https://alz.confex.com/alz/2022/meetingapp.cgi/Paper/67977"
