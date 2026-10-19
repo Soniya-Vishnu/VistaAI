@@ -1,6 +1,6 @@
 # Each entry becomes one clickable slide in the homepage banner carousel.
 
-- image: /assets/img/publications/manifold_aware_graphdiffusion.png
+- image: /assets/img/publications/Manifold_aware_graphdiffusion.png
   title: "MAGNET: Manifold-Aware Graph Diffusion Network for Connectome Generation"
   venue: "NeurIPS 2026"
   url: "https://arxiv.org/pdf/2610.17014"
