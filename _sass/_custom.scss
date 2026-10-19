@@ -196,18 +196,18 @@
 /* Content offset below the fixed header — matches header's actual height
    at each breakpoint, instead of a single fixed 130px that only works
    on desktop */
-.page-content-offset {
+h2 {
   margin-top: 10px;
 }
 
 @media (max-width: 900px) {
-  .page-content-offset {
+ h2 {
     margin-top: 10px;
   }
 }
 
 @media (max-width: 500px) {
-  .page-content-offset {
+ h2 {
     margin-top: 10px;
   }
 }
